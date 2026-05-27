@@ -20,19 +20,19 @@ public class EmployeeOperations {
         System.out.println("Salaries descending:");
         res4.forEach(System.out::println);
 
-        // Count active employees
+        // Count Active employees
         List<Employee> res5 = emps.stream()
                 .filter(Employee::isActiveStatus)
                 .collect(Collectors.toList());
         System.out.println("Active employees:");
         res5.forEach(System.out::println);
 
-        // Group employees by department
+        // Group Employees by department
         Map<String, Long> res6 = emps.stream()
                 .collect(Collectors.groupingBy(e -> e.getDepartment(), Collectors.counting()));
         System.out.println("Employees by department: " + res6);
 
-        // Highest salary Employee
+        // Highest Salary Employee
         Optional<Employee> res7 = emps.stream()
                 .max(Comparator.comparingInt((Employee e) -> e.getSalary()));
 
@@ -42,7 +42,7 @@ public class EmployeeOperations {
             System.out.println("No employees found.");
         }
 
-        // Second highest salary Employee
+        // Second Highest salary Employee
         Optional<Employee> res8 = emps.stream()
                 .sorted(Comparator.comparingInt((Employee e) -> e.getSalary()).reversed())
                 .skip(1)
@@ -53,15 +53,14 @@ public class EmployeeOperations {
         } else {
             System.out.println("No employees found.");
         }
-
-        // FETCH Employee with salary > 60,000
+         // check Employees  with salary > 60000
         List<Employee> res1 = emps.stream()
                 .filter(e -> e.getSalary() > 60000)
                 .collect(Collectors.toList());
         System.out.println("Employees with salary > 60000:");
         res1.forEach(System.out::println);
 
-        // Convert emp names to uppercase
+        // Convert employee names to uppercase
         List<String> res2 = emps.stream()
                 .map(e -> e.getName().toUpperCase())
                 .collect(Collectors.toList());
