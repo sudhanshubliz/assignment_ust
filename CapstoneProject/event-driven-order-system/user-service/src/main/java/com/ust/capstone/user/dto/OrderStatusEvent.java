@@ -1,0 +1,4 @@
+package com.ust.capstone.user.dto;
+
+public record OrderStatusEvent(Long orderId, Long userId, String status, String message) {
+}
