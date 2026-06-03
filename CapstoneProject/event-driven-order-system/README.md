@@ -59,6 +59,16 @@ Kafka UI:
 http://localhost:8080
 ```
 
+## Swagger Documentation
+
+Each microservice exposes its own Swagger UI, categorized by service:
+
+| Service | Swagger UI | OpenAPI JSON |
+| --- | --- | --- |
+| User Service | `http://localhost:9001/swagger-ui/index.html` | `http://localhost:9001/v3/api-docs` |
+| Order Service | `http://localhost:9002/swagger-ui/index.html` | `http://localhost:9002/v3/api-docs` |
+| Processing Service | `http://localhost:9003/swagger-ui/index.html` | `http://localhost:9003/v3/api-docs` |
+
 ## API Demo
 
 Create user:
