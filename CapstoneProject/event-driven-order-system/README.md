@@ -117,14 +117,3 @@ curl http://localhost:9002/actuator/health
 curl http://localhost:9003/actuator/health
 ```
 
-## Evaluation Coverage
-
-- Spring Boot REST APIs
-- Layered microservice design
-- H2 database persistence
-- Kafka producer with `KafkaTemplate<String, OrderEvent>`
-- Kafka consumers with consumer groups
-- JSON serialization/deserialization
-- Manual offset acknowledgment
-- Retry and dead letter topics
-- Event-driven asynchronous order processing
